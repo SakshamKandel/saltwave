@@ -199,7 +199,7 @@ const descriptionVariants = {
     transition: {
       delay: 0.3,
       duration: 0.5,
-      ease: "easeOut"
+      ease: "easeOut" as const,
     },
   },
   closed: { opacity: 0, x: "-20%" },
