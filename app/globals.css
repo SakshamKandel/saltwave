@@ -1,0 +1,114 @@
+@import "tailwindcss";
+@source "..";
+
+@theme {
+  --color-background: #FAF9F6;
+  --color-foreground: #1A1A1A;
+  --color-accent: #C4A484;
+  --color-accent-foreground: #FAF9F6;
+  --color-primary: #1A1A1A;
+  --color-primary-foreground: #FAF9F6;
+  --color-secondary: #D2B48C;
+  --color-secondary-foreground: #1A1A1A;
+  --color-muted: #E5E5E5;
+  --color-muted-foreground: #737373;
+  --color-border: #D2B48C;
+  --color-input: #E5E5E5;
+  --color-ring: #1A1A1A;
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #ffffff;
+}
+
+:root {
+  --background: #FAF9F6;
+  --foreground: #1A1A1A;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: #FAF9F6;
+  color: #1A1A1A;
+}
+
+/* Parallax Component Styles */
+.parallax {
+  position: relative;
+  width: 100%;
+}
+
+.parallax__header {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.parallax__visuals {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.parallax__layers {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parallax__layer-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.parallax__layer-title {
+  position: relative;
+  text-align: center;
+}
+
+.parallax__title {
+  font-family: var(--font-oswald), sans-serif;
+  font-size: 10vw;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 0;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.parallax__fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30vh;
+  background: linear-gradient(to top, #FAF9F6, transparent);
+  z-index: 20;
+}
+
+.parallax__content {
+  position: relative;
+  background: #FAF9F6;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px;
+}
+
+.osmo-icon-svg {
+  width: 100px;
+  color: #1A1A1A;
+}
