@@ -104,7 +104,7 @@ const InteractiveSelector = () => {
             {/* Label with icon and info */}
             <div className={`label absolute left-0 right-0 bottom-4 md:bottom-8 flex items-center h-12 z-20 px-6 gap-4 w-full transition-all duration-500 ${activeIndex === index ? 'opacity-100' : 'opacity-60'}`}>
               <div className="icon min-w-[40px] h-[40px] md:min-w-[48px] md:h-[48px] flex items-center justify-center rounded-full bg-background/20 backdrop-blur-md border border-white/20 flex-shrink-0 transition-transform duration-500 hover:scale-110">
-                {React.cloneElement(option.icon as React.ReactElement, { size: isMobile ? 18 : 24 })}
+                {React.cloneElement(option.icon as React.ReactElement<{ size: number }>, { size: isMobile ? 18 : 24 })}
               </div>
               <div className={`info text-white overflow-hidden transition-all duration-700 ease-in-out ${activeIndex === index ? 'max-w-full opacity-100' : 'max-w-0 opacity-0'}`}>
                 <div className="main font-bold text-lg md:text-xl uppercase tracking-wider font-oswald whitespace-nowrap">
